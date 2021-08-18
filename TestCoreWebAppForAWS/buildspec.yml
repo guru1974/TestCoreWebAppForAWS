@@ -9,7 +9,7 @@ phases:
       
   pre_build:
     commands:
-      - echo 'inside pre-build step'
+      - echo 'inside pre-build - hello'
       - echo Restore started on `date`      
       - dotnet restore TESTCoreWebAppForAWS.csproj
       
