@@ -11,13 +11,13 @@ phases:
     commands:
       - echo 'inside pre-build step'
       - echo Restore started on `date`
-      - dotnet restore ./TestCoreWebAppForAWS/TESTCoreWebAppForAWS.csproj
+      - dotnet restore /TestCoreWebAppForAWS/TESTCoreWebAppForAWS.csproj
       
   build:
     commands:
       - echo 'inside build step'
       - echo Build started on `date`
-      - dotnet build ./TestCoreWebAppForAWS/TESTCoreWebAppForAWS.csproj
+      - dotnet build /TestCoreWebAppForAWS/TESTCoreWebAppForAWS.csproj
       
   post_build:
     commands:
