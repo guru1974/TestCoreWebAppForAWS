@@ -9,19 +9,19 @@ phases:
       
   pre_build:
     commands:
-      - echo 'inside pre-build'
+      - echo 'inside pre-build step'
       - echo Restore started on `date`
       - dotnet restore ./TestCoreWebAppForAWS/TESTCoreWebAppForAWS.csproj
       
   build:
     commands:
-      - echo 'inside build''
+      - echo 'inside build step'
       - echo Build started on `date`
       - dotnet build ./TestCoreWebAppForAWS/TESTCoreWebAppForAWS.csproj
       
   post_build:
     commands:
-      - echo 'inside post-build'
+      - echo 'inside post-build step'
       - echo Publish started on `date`
       # https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/dotnet-linux-platform-bundle-app.html
       - dotnet publish -c Release -r linux-x64 ./TestCoreWebAppForAWS/TESTCoreWebAppForAWS.csproj
